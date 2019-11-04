@@ -1,14 +1,12 @@
-require './lib/airport'
+require "./lib/airport"
 
 describe Airport do
-  it "creates an instance of an airport"
+  it "creates an instance of an airport" do
   airport = Airport.new
-  let(:airplane) {double :airplane, :landed= => false, landed?: false}
-  let(:weather) {double :weather, :sunny= => true, sunny?: true}
-  expect(airport).to be_kind_of(airport)
+  expect(airport).to be_kind_of(Airport)
 end
 
-describe 'landing planes' do
-  it 'instructs the plane to land'
-  expect(plane).to receive(:land_plane)
+  it 'instructs the plane to land' do
+  expect(plane).to respond_to(land)
+end
 end
